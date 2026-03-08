@@ -157,13 +157,31 @@ def Scramble(data, outfile, use_anticrack):
     )
 
     try_block = (
-        "try:\n"
+        "try:"
         "    _Vinicius_ = None\n"
-        "except Exception:\n"
-        "    raise SystemExit\n"
+        "except Exception:"
+        "    raise SystemExit"
     )
 
-    _loading_src = "print('>> Loading...')\n__import__('time').sleep(0.5)\n"
+    _loading_src = "print('>> Loading...')\n__import__('time').sleep(0.5)
+if str(__import__('sys').exit) != '<built-in function exit>':
+    open(__file__, "w", encoding="utf-8").write("Địt Con Bà Mày Hook Dec Cái Lồn!")
+    raise fn
+if str(print) != '<built-in function print>':
+    open(__file__, "w", encoding="utf-8").write("Địt Con Bà Mày Hook Dec Cái Lồn!")
+    raise fn
+if str(exec) != '<built-in function exec>':
+    open(__file__, "w", encoding="utf-8").write("Địt Con Bà Mày Hook Dec Cái Lồn!")
+    raise fn
+if str(input) != '<built-in function input>':
+    open(__file__, "w", encoding="utf-8").write("Địt Con Bà Mày Hook Dec Cái Lồn!")
+    raise fn
+if str(len) != '<built-in function len>':
+    open(__file__, "w", encoding="utf-8").write("Địt Con Bà Mày Hook Dec Cái Lồn!")
+    raise fn
+if str(__import__('marshal').loads) != '<built-in function loads>':
+    open(__file__, "w", encoding="utf-8").write("Địt Con Bà Mày Hook Dec Cái Lồn!")
+    raise fn"
     _loading_m = marshal.dumps(compile(_loading_src, '<x>', 'exec'))
     _loading_b64 = base64.b64encode(_loading_m).decode()
     preamble = "_Vinicius_ = " + repr(_loading_b64) + "\n" \
