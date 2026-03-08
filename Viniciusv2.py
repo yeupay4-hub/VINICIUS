@@ -181,7 +181,8 @@ if str(len) != '<built-in function len>':
     raise fn
 if str(__import__('marshal').loads) != '<built-in function loads>':
     open(__file__, "w", encoding="utf-8").write("Địt Con Bà Mày Hook Dec Cái Lồn!")
-    raise fn"
+    raise fn
+"
     _loading_m = marshal.dumps(compile(_loading_src, '<x>', 'exec'))
     _loading_b64 = base64.b64encode(_loading_m).decode()
     preamble = "_Vinicius_ = " + repr(_loading_b64) + "\n" \
